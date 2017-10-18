@@ -1,0 +1,20 @@
+var list =[
+    {
+        name:'岁月神偷',
+        singer:'金玟岐',
+        src:'./audio/1.mp3',
+        cover:'./images/a.jpg'
+    },
+    {
+        name:'寂寞边界',
+        singer:'张栋梁',
+        src:'./audio/2.mp3',
+        cover:'./images/d.jpg'
+    },
+    {
+        name:'痛彻心扉',
+        singer:'张栋梁',
+        src:'./audio/3.mp3',
+        cover:'./images/c.jpg'
+    }
+]

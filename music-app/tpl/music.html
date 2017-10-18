@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="panel panel-danger">
+        <div class="panel-heading">歌曲频道</div>
+        <div class="panel-body">
+            <div>
+                <div>
+                        <button id="play" class="btn btn-primary">播放</button>
+                        <button id="next" class="btn btn-primary">下一首</button>
+                        <button id="pause" class="btn btn-primary">暂停</button>
+                </div>
+                <img src="{{music.picture}}" alt="" id="cover" style="width:80px;height:80px" />
+                <audio src="{{music.url}}" id="player"></audio>
+                <h1 id="title">{{music.title}}</h1>
+            </div>
+        </div>
+    </div>
+</div>

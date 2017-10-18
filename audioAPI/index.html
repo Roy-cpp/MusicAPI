@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="cpp">
+    <title>音乐播放器</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        input[type=range] {
+            -webkit-appearance: none;
+            /*margin: 18px 0;   */
+            width: 50%;
+        }
+
+        input[type=range]:focus {
+            outline: none;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            /*width: 100%;   */
+            height: 2px;
+            cursor: pointer;
+            /*animate: 0.2s;   */
+            /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;   */
+            background: green;
+            /*border-radius: 1.3px;   */
+            /*border: 0.2px solid #010101;   */
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;   */
+            /*border: 1px solid #000000;   */
+            /*height: 36px;   */
+            /*width: 16px;   */
+            /*border-radius: 3px;   */
+            /*background: #ffffff;   */
+            /*cursor: pointer;   */
+            -webkit-appearance: none;
+            margin-top: -7px;
+            border: 1px solid green;
+            height: 15px;
+            width: 15px;
+            border-radius: 8px;
+            background: green;
+            cursor: pointer;
+        }
+
+        input[type=range]:focus::-webkit-slider-runnable-track {
+            background: green;
+        }
+
+        input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 2px;
+            cursor: pointer;
+            /*animate: 0.2s;   */
+            /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;   */
+            background: green;
+            /*border-radius: 1.3px;   */
+            /*border: 0.2px solid #010101;   */
+        }
+
+        input[type=range]::-moz-range-thumb {
+            /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;   */
+            border: 1px solid green;
+            height: 15px;
+            width: 15px;
+            border-radius: 8px;
+            background: green;
+            cursor: pointer;
+        }
+
+        input[type=range]::-ms-track {
+            width: 100%;
+            height: 8.4px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: transparent;
+            border-color: transparent;
+            border-width: 16px 0;
+            color: transparent;
+        }
+
+        input[type=range]::-ms-fill-lower {
+            background: #2a6495;
+            border: 0.2px solid #010101;
+            border-radius: 2.6px;
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        }
+
+        input[type=range]::-ms-fill-upper {
+            background: #3071a9;
+            border: 0.2px solid #010101;
+            border-radius: 2.6px;
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        }
+
+        input[type=range]::-ms-thumb {
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+            border: 1px solid #000000;
+            height: 36px;
+            width: 16px;
+            border-radius: 3px;
+            background: #ffffff;
+            cursor: pointer;
+        }
+
+        input[type=range]:focus::-ms-fill-lower {
+            background: #3071a9;
+        }
+
+        input[type=range]:focus::-ms-fill-upper {
+            background: #367ebd;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="start()">开始</button>
+    <button onclick="playMusic()">播放</button>
+    <button onclick="pauseMusic()">暂停</button>
+    <button onclick="nextMusic()">下一首</button>
+    <button onclick="prevMusic()">上一首</button>
+    <button onclick="volumeUp()">音量+</button>
+    <button onclick="volumeDown()">音量-</button>
+    <br>
+    <input type="range" name="range" id="range" value="0" max="100">
+    <h1 id="title"></h1>
+    <h2 id="singer"></h2>
+    <img src="" alt="" id="cover" style="width:80px;height:80px">
+    <audio src="" id="player"></audio>
+
+    <script src="./js/list.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+<html>

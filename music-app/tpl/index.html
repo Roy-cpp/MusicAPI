@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="panel panel-danger">
+        <div class="panel-heading">歌曲频道</div>
+        <div class="panel-body">
+            <main>
+                {{each channels channel index}}
+                <a href="#show/{{channel.channel_id}}">{{channel.name}}</a> {{/each}}
+            </main>
+        </div>
+    </div>
+</div>
