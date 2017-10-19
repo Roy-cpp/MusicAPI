@@ -1,0 +1,17 @@
+<audio>标签的重要属性：
+src
+currentTime
+duration
+volume
+paused
+
+<audio>标签的重要方法：
+play()
+load()
+pause()
+
+<audio>标签的事件：
+timeupdate
+volumechange
+ended
+
